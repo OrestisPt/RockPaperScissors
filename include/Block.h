@@ -1,16 +1,19 @@
 #pragma once
 
+
+typedef struct block *Block;
+
 typedef enum {
     Rock, Paper, Scissors
 }blockType;
 
-typedef struct block {
+struct block {
     int directionx;
     int directiony;
     blockType type;
     int x;
     int y;
-}*Block;
+};
 
 Block block_create(blockType type);
 

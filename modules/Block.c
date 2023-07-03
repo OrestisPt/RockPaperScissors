@@ -25,8 +25,6 @@ void move(Block element){
     element->y += element->directiony;
 }
 
-
-
 void block_destroy(Block block){
     free(block);
 }
