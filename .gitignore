@@ -1,0 +1,8 @@
+*
+!*/
+!*.c
+!*.h
+!*.mk
+!*Makefile
+!.vscode/*.json
+!.gitignore
