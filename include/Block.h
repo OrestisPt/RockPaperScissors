@@ -5,6 +5,8 @@ typedef enum {
 }blockType;
 
 typedef struct block {
+    int directionx;
+    int directiony;
     blockType type;
     int x;
     int y;

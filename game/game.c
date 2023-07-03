@@ -6,6 +6,7 @@
 State state;
 
 void update_and_draw() {
+    state_update(state);
     interface_draw_frame(state);
 }
 

@@ -12,15 +12,4 @@ typedef struct state {
 
 State state_create(int n);
 
-// void state_update(State state){
-//     for(int i = 0; i < state->RockCount; i++){
-//         move(state->Rocks[i]);
-//         if()
-//     }
-//     for(int i = 0; i < state->PaperCount; i++){
-//         move(state->Papers[i]);
-//     }
-//     for(int i = 0; i < state->ScissorsCount; i++){
-//         move(state->Scissors[i]);
-//     }
-// }
+void state_update(State state);

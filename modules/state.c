@@ -16,3 +16,9 @@ State state_create(int n){
     }
     return state;
 }
+
+void state_update(State state){
+    for(int i = 0; i < state->totalCount; i++){
+        move(state->Blocks[i]);
+    }
+}
