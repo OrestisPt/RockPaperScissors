@@ -13,4 +13,7 @@ cd game (If you are not in the game folder)
 make run
 ```
 
+There is also an exe version for windows users. To run it, just double click on the file.
+(MinGw is required to run the exe file)
+
 Enjoy!
