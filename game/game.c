@@ -30,18 +30,25 @@ void update_and_draw() {
             int size = MeasureText("Scissors Won!", 20);
             DrawText("Scissors Won!", (SCREEN_WIDTH-size)/2, SCREEN_HEIGHT/2, 20, WHITE);
         }
-        int size = MeasureText("Press ESC to Exit", 20);
-        DrawText("Press ESC to Exit", (SCREEN_WIDTH-size)/2, SCREEN_HEIGHT/2+50, 20, WHITE);
+        int size = MeasureText("Press ESC to Exit or R to Replay", 20);
+        DrawText("Press ESC to Exit or R to Replay", (SCREEN_WIDTH-size)/2, SCREEN_HEIGHT/2+50, 20, WHITE);
         EndDrawing();
     }
 }
 
 int main() {
     interface_init();
+Replay:
     state = state_create(30);
 	
     while (!WindowShouldClose()) {
         update_and_draw();
+        if(IsKeyPressed(KEY_R) && is_over){
+            is_over = false;
+            winner = -1;
+            state_destroy(state);
+            goto Replay;
+        }
     }
     state_destroy(state);
     interface_close();
