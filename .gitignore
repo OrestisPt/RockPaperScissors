@@ -6,3 +6,5 @@
 !*Makefile
 !.vscode/*.json
 !.gitignore
+!*.jpg
+!*.png

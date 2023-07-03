@@ -5,7 +5,7 @@ MODULES = ../modules
 
 CC = gcc
 
-OBJS = game.o $(MODULES)/interface.o $(LIB)/libraylib.a
+OBJS = game.o $(MODULES)/interface.o $(LIB)/libraylib.a $(MODULES)/state.o $(MODULES)/Block.o
 EXEC = game
 CFLAGS = -Wall -g -I$(INCLUDE) 
 LDFLAGS = -lm
