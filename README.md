@@ -14,6 +14,6 @@ make run
 ```
 
 There is also an exe version for windows users. To run it, just double click on the file.
-(MinGw is required to run the exe file)
+(MinGw is required to run the exe file as well as an 'assets' folder with the images)
 
 Enjoy!
