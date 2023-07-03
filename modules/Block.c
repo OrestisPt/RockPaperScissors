@@ -5,6 +5,10 @@
 Block block_create(blockType type){
     Block block = malloc(sizeof(*block));
     block->directionx = rand() % 5 + 1;
+    if(rand() % 2 == 0)
+        block->directionx *= -1;
+    if(rand() % 2 == 0)
+        block->directiony *= -1;
     block->directiony = rand() % 5 + 1;
     block->type = type;
     block->x = rand() % (SCREEN_WIDTH-50);
@@ -20,6 +24,8 @@ void move(Block element){
     element->x += element->directionx;
     element->y += element->directiony;
 }
+
+
 
 void block_destroy(Block block){
     free(block);
