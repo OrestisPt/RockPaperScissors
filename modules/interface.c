@@ -1,9 +1,10 @@
 #include "interface.h"
 #include "raylib.h"
+#include "Canvas.h"
 
 void interface_init() {
 	// Αρχικοποίηση του παραθύρου
-	InitWindow(800, 900, "RockPaperScissors");
+	InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "RockPaperScissors");
 	SetTargetFPS(60);
     InitAudioDevice();
 }
