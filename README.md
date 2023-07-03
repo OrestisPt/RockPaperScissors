@@ -9,7 +9,7 @@ You will need to launch the VcXsrv application before running the game and have 
 Then, run the following commands in the terminal:
 
 ```
-cd RockPaperScissors/game (If you are not in the game folder)
+cd game (If you are not in the game folder)
 make run
 ```
 
