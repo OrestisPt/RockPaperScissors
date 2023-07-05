@@ -1,6 +1,7 @@
 #pragma once
 #include "Block.h"
 #include <stdbool.h>
+#include "raylib.h"
 
 typedef struct state *State;
 
@@ -9,6 +10,7 @@ struct state {
     int PaperCount;
     int ScissorsCount;
     int totalCount;
+    bool paused;
     Block* Blocks;
 };
 

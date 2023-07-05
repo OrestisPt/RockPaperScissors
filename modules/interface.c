@@ -33,5 +33,9 @@ void interface_draw_frame(State state) {
 			DrawTexture(ScissorsTexture, state->Blocks[i]->x, state->Blocks[i]->y, WHITE);
 		}
 	}
+	if(state->paused){
+		int size = MeasureText("Paused", 100);
+		DrawText("Paused", (SCREEN_WIDTH-size)/2, SCREEN_HEIGHT/2, 100, BLACK);
+	}
     EndDrawing();
 }

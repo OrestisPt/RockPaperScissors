@@ -27,6 +27,7 @@ Block block_collide(State state, Block block){
 
 State state_create(int n){
     State state = malloc(sizeof(*state));
+    state->paused = false;
     state->RockCount = n;
     state->PaperCount = n;
     state->ScissorsCount = n;
@@ -41,6 +42,15 @@ State state_create(int n){
 }
 
 void state_update(State state){
+    if(state->paused){
+        if(IsKeyPressed(KEY_SPACE))   
+            state->paused = false;
+        return;
+    }
+    if(IsKeyPressed(KEY_SPACE)){
+        state->paused = true;
+        return;
+    }
     for(int i = 0; i < state->totalCount; i++){
         Block collide = block_collide(state, state->Blocks[i]);
         if(collide != NULL){
