@@ -35,7 +35,7 @@ void interface_draw_frame(State state) {
 	}
 	if(state->paused){
 		int size = MeasureText("Paused", 100);
-		DrawText("Paused", (SCREEN_WIDTH-size)/2, SCREEN_HEIGHT/2, 100, BLACK);
+		DrawText("Paused", (SCREEN_WIDTH-size)/2, SCREEN_HEIGHT/2 - 70, 100, BLACK);
 	}
     EndDrawing();
 }
