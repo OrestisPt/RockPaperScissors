@@ -43,7 +43,7 @@ Replay:
 	
     while (!WindowShouldClose()) {
         update_and_draw();
-        if(IsKeyPressed(KEY_R) && is_over){
+        if((IsKeyPressed(KEY_R) && is_over) || (IsKeyDown(KEY_LEFT_SHIFT) && IsKeyPressed(KEY_R))){
             is_over = false;
             winner = -1;
             state_destroy(state);
